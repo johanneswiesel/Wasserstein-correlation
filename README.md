@@ -3,7 +3,7 @@ This repository contains the implementations of the numerical examples in "Measu
 
 ## Prerequisites
  
-Python, NumPy, SciPy, Matplotlib, XiCor, OT, statsmodels
+Python, NumPy, SciPy, Matplotlib, XiCor, OT, statsmodels. 
 The programs were tested with Python 3.7.0.
 
 ## Running the programs
