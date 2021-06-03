@@ -8,7 +8,7 @@ The programs were tested with Python 3.7.0.
 
 ## Running the programs
 
-Each script contains the implementation of one example.
+Each script contains the implementation of one figure.
 
 ## License
 
