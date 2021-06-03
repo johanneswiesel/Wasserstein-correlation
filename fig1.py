@@ -1,8 +1,8 @@
 """
 @author: Johannes Wiesel 
 
-Plots the Pearson correlation coeefficent, Distance correlation coeefficent, 
-(unnormalised) Hellinger correlation coeefficent and Wasserstein correlation coefficient
+Plots the Pearson correlation coefficient, Distance correlation coefficient, 
+(unnormalised) Hellinger correlation coefficient and Wasserstein correlation coefficient
 for bivariate standard normal random variables (X_1,X_2) as a function of the correlation rho
 """
 
