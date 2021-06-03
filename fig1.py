@@ -3,7 +3,7 @@
 
 Plots the Pearson correlation coeefficent, Distance correlation coeefficent, 
 (unnormalised) Hellinger correlation coeefficent and Wasserstein correlation coefficient
-for the bivariate standard normal case as a function of the correlation rho
+for bivariate standard normal random variables (X_1,X_2) as a function of the correlation rho
 """
 
 import matplotlib
