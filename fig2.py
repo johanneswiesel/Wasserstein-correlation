@@ -1,8 +1,8 @@
 """
 @author: Johannes Wiesel 
 
-Plots the Pearson correlation coeefficent, Spearman correlation coeefficent,
-Distance correlation coeefficent, Chatterjee's correlation coeefficent 
+Plots the Pearson correlation coefficient, Spearman correlation coefficient,
+Distance correlation coefficient, Chatterjee's correlation coefficient 
 and Wasserstein correlation coefficient between (X_1, f(X_2)) 
 for the bivariate uniform distribution (X_1, X_2) as a function of the
 correlation rho for different functions f(x)
@@ -74,9 +74,11 @@ scor_aux = np.zeros(M)
 dcor_aux = np.zeros(M)
 ccor_aux = np.zeros(M)
 
+#Define function f(x)
 def func(x):
     return np.abs(x-0.5)
 
+#Compute estimators
 for i in range(0,len(lam)):
     for j in range(0, M):
         print(i,j)
@@ -94,6 +96,7 @@ for i in range(0,len(lam)):
     ccor[i] = np.mean(ccor_aux)
     scor[i] = np.mean(scor_aux)
 
+#Plot
 f = plt.figure(figsize=(11.69,8.27))
 plt.plot(lam, Wcor, label="Wasserstein correlation")
 plt.plot(lam, pcor, label="Pearson's correlation")
