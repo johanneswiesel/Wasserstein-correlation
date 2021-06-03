@@ -1,9 +1,9 @@
 """
 @author: Johannes Wiesel 
 
-Plots of the Pearson correlation coeefficent, Distance correlation coeefficent, 
+Plots the Pearson correlation coeefficent, Distance correlation coeefficent, 
 (unnormalised) Hellinger correlation coeefficent and Wasserstein correlation coefficient
-for the bivariate standard Gaussian case
+for the bivariate standard normal case as a function of the correlation rho
 """
 
 import matplotlib
