@@ -12,7 +12,6 @@ from collections import Counter
 from scipy.stats import pearsonr,spearmanr
 from scipy.spatial.distance import pdist, squareform
 from xicor.xicor import Xi
-import pickle 
 import ot
 
 def distcorr(X, Y):
