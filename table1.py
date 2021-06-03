@@ -39,11 +39,8 @@ def distcorr(X, Y):
     return dcor
 
 def adapW1_eot(x,y,N):
-    #Assume d=1 and thus quantisation N^(-1/3)
-    
     x_new = N**(-1/3)*np.floor(N**(1/3)*x)
     y_new =  N**(-1/3)*np.floor(N**(1/3)*y)
-    #plt.plot(x_new, y_new, '.')
 
     x_val = np.array(list(Counter(x_new).keys()))
     x_freq = np.array(list(Counter(x_new).values()))
@@ -59,18 +56,17 @@ def adapW1_eot(x,y,N):
     denom = c.sum()/N**2
     return np.dot(W, x_freq)/(N*denom)
 
-
+# Import peas.csv
 peas = []
 import csv
 with open('peas.csv', 'r') as file:
     reader = csv.reader(file)
     for row in reader:
-        peas.append([float(i) for i in row])
-        
+        peas.append([float(i) for i in row])       
 peas = np.array(peas)[:,1:3]
 
+#Print correlation between X_1 and X_2
 xi =  np.zeros(10**4)
-
 adapW1_eot(peas[:,0], peas[:,1],len(peas[:,0]))
 pearsonr(peas[:,0], peas[:,1])
 spearmanr(peas[:,0], peas[:,1])
@@ -81,9 +77,8 @@ for i in range(1,10**4):
     xi[i]=Xi(peas[:,0], peas[:,1]).correlation
 np.mean(xi)
 
-
+#Print correlation between X_2 and X_1
 xi =  np.zeros(10**4)
-
 adapW1_eot(peas[:,1], peas[:,0],len(peas[:,0]))
 pearsonr(peas[:,1], peas[:,0])
 distcorr(peas[:,1], peas[:,0])
