@@ -75,9 +75,11 @@ def adapW1_eot(x,y,N):
     c = np.abs(y_new.reshape((N,1))-y_new)
     return np.dot(W, x_freq)/N
 
+# Define function f(x)
 def func(x):
     return x
 
+# Set input parameters
 rho = np.linspace(-0.5,0.5, num=50)
 N = 1500
 M = 200
@@ -91,6 +93,7 @@ freqD =  np.zeros(len(rho))
 freqC = np.zeros(len(rho))
 freqXi = np.zeros(len(rho))
 
+#Compute estimators
 for i in range(1, len(rho)):
     for j in range(1, M):
         print(i,j)
@@ -108,7 +111,7 @@ for i in range(1, len(rho)):
     freqC[i] = np.mean(indC)
     freqXi[i] = np.mean(indXi)
         
-
+#Plot
 f = plt.figure(figsize=(11.69,8.27))   
 plt.plot(rho, 1 - freqW , label= "Power of the Wasserstein test")
 plt.plot(rho, 1 - freqD , label= "Power of the Distance covariance test")
