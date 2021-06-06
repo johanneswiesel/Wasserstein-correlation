@@ -1,5 +1,6 @@
 """
 @author: Johannes Wiesel 
+
 Plots a histogramm of the normalised empirical distribution of the Wasserstein correlation against a standard normal density
 """
 
