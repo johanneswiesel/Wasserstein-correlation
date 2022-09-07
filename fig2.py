@@ -83,7 +83,7 @@ for i in range(0,len(lam)):
     for j in range(0, M):
         print(i,j)
         x = np.random.random_sample(N)
-        y = lam[i]*func(x)+(1-lam[i])*np.random.random_sample(N)
+        y = lam[i]*func(x)+np.sqrt(1-lam[i]**2)*np.random.random_sample(N)
         Wcor_aux[j] = adapW1_eot(x,y,N)
         pcor_aux[j] , _ = pearsonr(x, y)
         dcor_aux[j] = distcorr(x, y)
